@@ -4,6 +4,7 @@ import sys
 
 from CalcRating import CalcRating
 from TextDataReader import TextDataReader
+from CalcGoodCount import CalcGoodCount
 
 
 def get_path_from_arguments(args) -> str:
@@ -21,8 +22,8 @@ def main():
     students = reader.read(path)
     print("Students: ", students)
 
-    rating = CalcRating(students).calc()
-    print("Rating: ", rating)
+    count = CalcGoodCount(students).calc()
+    print("Хорошисты: ", count)
 
 
 if __name__ == "__main__":
